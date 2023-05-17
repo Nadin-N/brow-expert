@@ -1,2 +1,9 @@
+@import './reset';
+@import './utils/mixins';
+@import './utils/variables';
 @import './common';
-@import './example';
+@import './layout/_container';
+@import './layout/_header';
+@import './layout/_hero';
+@import './layout/_about';
+@import './layout/_services';

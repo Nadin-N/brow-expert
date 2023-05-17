@@ -1,0 +1,18 @@
+.container {
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+
+  width: 320px;
+
+  @include adaptive(mobile-large) {
+    padding: 0 20px;
+    width: 440px;
+  }
+  @include adaptive(tablet) {
+    width: 808px;
+  }
+  @include adaptive(desktop) {
+    width: 1240px;
+  }
+}

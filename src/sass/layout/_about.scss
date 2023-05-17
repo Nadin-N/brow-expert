@@ -1,0 +1,119 @@
+.achievements {
+  position: relative;
+  background-color: var(--bg-color-secondary);
+  text-align: center;
+  padding-bottom: 30px;
+  @include adaptive(desktop) {
+    padding-bottom: 83px;
+  }
+}
+.section-title-white {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 117.857143%; /* 33/28 */
+  text-transform: uppercase;
+  color: var(--text-color-secondary);
+  text-shadow: var(--bg-color-secondary) 0px -2px 0px;
+  text-align: center;
+  &::after {
+    @include psevdoEl;
+    margin: 8px auto 0;
+  }
+  @include adaptive(tablet) {
+    font-size: 50px;
+    line-height: 116.666667%; /* 98/84 */
+  }
+  @include adaptive(desktop) {
+    font-size: 84px;
+    line-height: 116.666667%; /* 98/84 */
+  }
+}
+
+.achievements-title {
+  transform: translate(0px, -7px);
+  margin-bottom: 9px;
+  @include adaptive(tablet) {
+    transform: translate(0px, -15px);
+    margin-bottom: 15px;
+  }
+  @include adaptive(desktop) {
+    transform: translate(0px, -25px);
+    margin-bottom: 15px;
+  }
+}
+.achievements-text {
+  line-height: 154.545455%; /* 17/11 */
+  margin-bottom: 36px;
+  @include adaptive(desktop) {
+    font-size: 15px;
+    line-height: 146.666667%; /* 22/15 */
+    margin-bottom: 80px;
+  }
+}
+ul.achievements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 0 auto 18px;
+  @include adaptive(tablet) {
+    width: 100%;
+  }
+  @include adaptive(desktop) {
+    gap: 24px;
+    margin: 0 auto 40px;
+  }
+}
+li.achievements-item {
+  @include centeredFlex;
+  flex-direction: column;
+  width: 144px;
+  height: 144px;
+  border: 4px solid #ffffff;
+  text-transform: uppercase;
+  @include adaptive(desktop) {
+    width: 282px;
+    height: 282px;
+    border: 18px solid #ffffff;
+  }
+}
+.achievements-number {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 117.5%; /* 47/40 */
+  color: var(--accent-color);
+  @include adaptive(desktop) {
+    font-size: 66px;
+    line-height: 116.666667%; /* 77/66 */
+  }
+}
+.achievements-name {
+  font-size: 13px;
+  line-height: 138.461538%; /* 18/13 */
+  @include adaptive(desktop) {
+    ont-size: 17px;
+    line-height: 152.941176%; /* 26/17 */
+  }
+}
+.achievements-details {
+  @include centeredFlex;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 123.076923%; /* 16/13 */
+  opacity: 0.4;
+  @include adaptive(desktop) {
+    font-size: 17px;
+    line-height: 117.647059%; /* 20/17 */
+  }
+}
+.achievements-img {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, 8%);
+  width: 145px;
+  @include adaptive(desktop) {
+    width: 414px;
+    transform: translate(-50%);
+  }
+}
