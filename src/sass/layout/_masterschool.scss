@@ -1,0 +1,111 @@
+.masterschool {
+  position: relative;
+  background-color: var(--bg-color-secondary);
+  text-align: center;
+  padding-bottom: 36px;
+  @include adaptive(desktop) {
+    padding-bottom: 83px;
+  }
+}
+.masterschool-text {
+  line-height: 154.545455%; /* 17/11 */
+  margin-bottom: 36px;
+  @include adaptive(tablet) {
+    max-width: 363px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 13px;
+    line-height: 146.666667%;
+  }
+  @include adaptive(desktop) {
+    font-size: 15px;
+    margin-bottom: 80px;
+  }
+}
+ul.masterschool-list {
+  @include centeredFlex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 36px;
+  @include adaptive(tablet) {
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  @include adaptive(desktop) {
+    gap: 112px;
+    margin-bottom: 80px;
+  }
+}
+.masterschool-item {
+  position: relative;
+  width: 194px;
+  height: 97px;
+  overflow: hidden;
+  text-align: left;
+  @include adaptive(desktop) {
+    width: 295px;
+    height: 153px;
+  }
+}
+
+.masterschool-number {
+  @include centeredFlex;
+  width: 60px;
+  height: 60px;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 117.5%; /* 47/40 */
+  text-transform: uppercase;
+  color: #ff312e;
+  border: 4px solid #ffffff;
+  @include adaptive(desktop) {
+    width: 120px;
+    height: 120px;
+    font-size: 66px;
+    line-height: 116.666667%; /* 77/66 */
+  }
+}
+.masterschool-description {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 140px;
+  @include adaptive(desktop) {
+    width: 200px;
+  }
+}
+
+.masterschool-description-title {
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 120%; /* 18/15 */
+  text-transform: uppercase;
+  color: var(--text-color-main);
+  margin-bottom: 7px;
+  @include adaptive(desktop) {
+    font-size: 22px;
+    line-height: 118.181818%; /* 26/22 */
+    margin-bottom: 17px;
+  }
+}
+.masterschool-description-text {
+  line-height: 154.545455%; /* 17/11 */
+  @include adaptive(desktop) {
+    font-size: 15px;
+    line-height: 146.666667%; /* 22/15 */
+  }
+}
+
+.masterschool-img {
+  position: absolute;
+  z-index: 2;
+  left: 62%;
+  transform: translate(-50%, -22%);
+  width: 160px;
+  @include adaptive(desktop) {
+    width: 384px;
+    transform: translate(25%, -29%);
+  }
+}

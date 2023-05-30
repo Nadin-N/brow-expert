@@ -1,3 +1,4 @@
 import './js/header';
-import './js/slider';
+import './js/hero-slider';
 import './js/services';
+import './js/reviews-slider';

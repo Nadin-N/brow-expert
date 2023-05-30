@@ -7,40 +7,7 @@
     padding-bottom: 83px;
   }
 }
-.section-title-white {
-  font-weight: 900;
-  font-size: 28px;
-  line-height: 117.857143%; /* 33/28 */
-  text-transform: uppercase;
-  color: var(--text-color-secondary);
-  text-shadow: var(--bg-color-secondary) 0px -2px 0px;
-  text-align: center;
-  &::after {
-    @include psevdoEl;
-    margin: 8px auto 0;
-  }
-  @include adaptive(tablet) {
-    font-size: 50px;
-    line-height: 116.666667%; /* 98/84 */
-  }
-  @include adaptive(desktop) {
-    font-size: 84px;
-    line-height: 116.666667%; /* 98/84 */
-  }
-}
 
-.achievements-title {
-  transform: translate(0px, -7px);
-  margin-bottom: 9px;
-  @include adaptive(tablet) {
-    transform: translate(0px, -15px);
-    margin-bottom: 15px;
-  }
-  @include adaptive(desktop) {
-    transform: translate(0px, -25px);
-    margin-bottom: 15px;
-  }
-}
 .achievements-text {
   line-height: 154.545455%; /* 17/11 */
   margin-bottom: 36px;

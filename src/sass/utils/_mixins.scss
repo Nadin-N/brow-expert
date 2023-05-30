@@ -20,7 +20,7 @@
   $mobile: 320px;
   $mobile-large: 480px;
   $tablet: 768px;
-  $desktop: 1200px;
+  $desktop: 1240px;
 
   // mobile from 320 & > infinite
   @if ($type == mobile) {
@@ -58,7 +58,7 @@
       @content;
     }
   }
-  // desktop from 1200 & > infinite
+  // desktop from 1240 & > infinite
   @if ($type == desktop) {
     @media screen and (min-width: $desktop) {
       @content;

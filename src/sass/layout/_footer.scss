@@ -1,0 +1,123 @@
+.footer-contacts {
+  background-color: var(--bg-color-secondary);
+}
+
+.contacts-title {
+  margin-bottom: 31px;
+  @include adaptive(tablet) {
+    margin-bottom: 50px;
+  }
+  @include adaptive(desktop) {
+    margin-bottom: 80px;
+  }
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  text-align: center;
+  margin-bottom: 36px;
+  @include adaptive(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 50px;
+  }
+  @include adaptive(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 139px;
+    margin-bottom: 80px;
+  }
+}
+.contact-item {
+}
+.contact-link {
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 115.384615%; /* 15/13 */
+  @include adaptive(tablet) {
+    font-size: 16px;
+    line-height: 118.181818%; /* 26/22 */
+  }
+  @include adaptive(desktop) {
+    font-size: 22px;
+  }
+}
+
+.contact-detail {
+  margin-top: 6px;
+  line-height: 118.181818%; /* 13/11 */
+  @include adaptive(tablet) {
+    font-size: 13px;
+  }
+  @include adaptive(desktop) {
+    font-size: 15px;
+    line-height: 120%; /* 18/15 */
+  }
+}
+.footer-menu-list {
+  text-align: center;
+  @include adaptive(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    line-height: 120%; /* 18/15 */
+    padding: 20px 0;
+    border-top: 1px solid rgba(34, 34, 34, 0.2);
+  }
+  @include adaptive(desktop) {
+    font-size: 15px;
+    padding: 40px 0;
+  }
+}
+.footer-menu-item {
+  @include adaptive(desktop) {
+    &:nth-child(2) {
+      margin-right: -70px;
+    }
+  }
+}
+.footer-copy {
+  padding: 15px 0;
+  border-top: 1px solid rgba(34, 34, 34, 0.2);
+  border-bottom: 1px solid rgba(34, 34, 34, 0.2);
+  @include adaptive(tablet) {
+    border-top: none;
+    border-bottom: none;
+    padding: 0;
+  }
+}
+.footer-nav {
+  display: none;
+  @include adaptive(desktop) {
+    display: flex;
+    gap: 34px;
+  }
+}
+.contacts-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+  @include adaptive(tablet) {
+    padding: 0;
+  }
+}
+.social-text {
+  display: none;
+  @include adaptive(tablet) {
+    display: block;
+  }
+}
+.facebook-icon {
+}
+.facebook {
+}
+.instagram-icon {
+}
+.instagram {
+}

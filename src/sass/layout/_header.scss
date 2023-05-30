@@ -1,7 +1,6 @@
 // !DESCTOP/TABLET HEADER
 .header {
   position: fixed;
-  width: 100%;
   left: 0;
   right: 0;
   top: 0;
@@ -47,7 +46,6 @@
 
 .header-address-pointer,
 .header-telegram-link {
-  font-size: 11px;
   line-height: 118.181818%; /* 13/11 */
   @include adaptive(tablet) {
     font-size: 13px;

@@ -2,8 +2,8 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 11px;
   font-weight: 300;
-  //   background-color: var(--bg-color-main);
-  background-color: lightgreen;
+  background-color: var(--bg-color-main);
+
   color: var(--text-color-main);
   padding-top: 64px;
   @include adaptive(mobile-large) {
@@ -47,7 +47,7 @@ body {
 .action-button {
   width: 196px;
   height: 38px;
-  background: #ffffff;
+  background: transparent;
   border: 1px solid #ff312e;
   border-radius: 100px;
   font-weight: 900;
@@ -60,5 +60,33 @@ body {
     height: 44px;
     font-size: 13px;
     line-height: 115.384615%; /* 15/13 */
+  }
+}
+
+.section-title-white {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 117.857143%; /* 33/28 */
+  text-transform: uppercase;
+  color: var(--text-color-secondary);
+  text-shadow: var(--bg-color-secondary) 0px -2px 0px;
+  text-align: center;
+  transform: translate(0px, -7px);
+  margin-bottom: 9px;
+  &::after {
+    @include psevdoEl;
+    margin: 8px auto 0;
+  }
+  @include adaptive(tablet) {
+    font-size: 50px;
+    line-height: 116.666667%; /* 98/84 */
+    transform: translate(0px, -15px);
+    margin-bottom: 15px;
+  }
+  @include adaptive(desktop) {
+    font-size: 84px;
+    line-height: 116.666667%; /* 98/84 */
+    transform: translate(0px, -25px);
+    margin-bottom: 15px;
   }
 }

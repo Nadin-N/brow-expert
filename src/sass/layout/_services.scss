@@ -112,7 +112,6 @@
   }
 }
 .services-text {
-  font-size: 11px;
   line-height: 154.545455%; /* 17/11 */
   @include adaptive(tablet) {
     font-size: 13px;
@@ -171,11 +170,15 @@
 .service-order {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   @include adaptive(tablet) {
     position: absolute;
     bottom: 0;
     right: 0;
+    gap: 55px;
+  }
+  @include adaptive(desktop) {
     gap: 68px;
   }
 }
@@ -203,11 +206,15 @@
 }
 
 .service-tool-img {
+  z-index: 2;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -20%);
   width: 150px;
   pointer-events: none;
+  @include adaptive(tablet) {
+    transform: translate(-50%, -50%);
+  }
   @include adaptive(desktop) {
     width: 368px;
     transform: translate(-50%);
@@ -282,14 +289,14 @@
 
 .dropdown-list {
   display: none;
-
+  cursor: pointer;
   position: absolute;
   left: 0;
   background: #ffffff;
   overflow: hidden;
 
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 .service-dropdown-list {
   display: none;
