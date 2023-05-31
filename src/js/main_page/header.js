@@ -23,22 +23,25 @@ class Header {
   }
 
   changeColor() {
-    let itemClassName = null;
-
-    if (window.location.href.includes('index.html')) {
-      this.refs.header.classList.add('header-main');
-      itemClassName = 'current-page-main';
-    } else {
-      itemClassName = 'current-page';
-    }
+    const dataPathArr = [];
 
     this.refs.menuItems.forEach(item => {
       let itemName = item.dataset.path;
 
+      dataPathArr.push(itemName);
+
       window.location.href.includes(itemName)
-        ? item.classList.add(itemClassName)
-        : item.classList.remove(itemClassName);
+        ? item.classList.add('current-page')
+        : item.classList.remove('current-page');
     });
+
+    const isSecondaryPage = dataPathArr.some(item =>
+      window.location.href.includes(item)
+    );
+
+    isSecondaryPage
+      ? this.refs.header.classList.remove('header-main')
+      : this.refs.header.classList.add('header-main');
   }
 
   toggleMenu() {
