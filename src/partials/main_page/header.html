@@ -1,44 +1,43 @@
-<header class="header container">
-  <ul class="header-menu-desk">
-    <li class="header-item">
-      <a
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="header-address-link"
-      >
-        <address class="header-address">Kyiv, Lesi Ukrainky St, 14</address>
-        <div class="header-address-pointer">Look on the map</div>
-      </a>
-    </li>
-    <li class="header-item">
-      <nav class="header-nav">
-        <a href="#" class="current-page">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#" class="logo">BE</a>
-        <a href="#">Reviews</a>
-        <a href="#"> Courses</a>
-        <a href="#">Contacts</a>
-      </nav>
-    </li>
-    <li class="header-item">
-      <address class="header-phone">
-        <a href="tel:+380961111111" class="header-phone-link"
-          >+38 096 111 11 11</a
+<header class="header js-header">
+  <div class="container">
+    <ul class="header-menu-desk">
+      <li class="header-item">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="header-address-link"
         >
-      </address>
-      <a href="#" class="header-telegram-link">Write to us</a>
-    </li>
-  </ul>
-
-  <!-- mobile menu -->
-  <div class="mobile-menu-wrap">
-    <ul class="header-menu-mobile">
-      <li class="header-burger js-menu-open">
-        <svg class="header-burger-icon" width="30" height="20">
-          <use href="./images/svg-icons.svg#icon-burger"></use>
-        </svg>
+          <address class="header-address">Kyiv, Lesi Ukrainky St, 14</address>
+          <div class="header-address-pointer">Look on the map</div>
+        </a>
+      </li>
+      <li class="header-item">
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="js-nav-item current-page-main" data-path="index">
+              <a class="header-nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="js-nav-item" data-path="about">
+              <a class="header-nav-link" href="./about.html">About</a>
+            </li>
+            <li class="js-nav-item" data-path="services">
+              <a class="header-nav-link" href="#">Services</a>
+            </li>
+            <li class="js-nav-item logo">
+              <p>BE</p>
+            </li>
+            <li class="js-nav-item" data-path="reviews">
+              <a class="header-nav-link" href="#">Reviews</a>
+            </li>
+            <li class="js-nav-item" data-path="courses">
+              <a class="header-nav-link" href="#"> Courses</a>
+            </li>
+            <li class="js-nav-item" data-path="contacts">
+              <a class="header-nav-link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
       </li>
       <li class="header-item">
         <address class="header-phone">
@@ -48,28 +47,47 @@
         </address>
         <a href="#" class="header-telegram-link">Write to us</a>
       </li>
-      <li class="header-item">
-        <a href="#" class="logo">BE</a>
-      </li>
     </ul>
-    <!-- modal menu -->
-    <div class="modal-menu js-modal-menu is-hidden">
-      <button type="button" class="mobile-menu-close js-menu-close">
-        <svg class="modal-close-icon" width="24" height="24">
-          <use
-            class="menu-close-cross"
-            href="./images/svg-icons.svg#icon-close"
-          ></use>
-        </svg>
-      </button>
-      <nav class="mobile-header-nav">
-        <a href="#" class="mobile-nav-link">Home</a>
-        <a href="#" class="mobile-nav-link">About</a>
-        <a href="#" class="mobile-nav-link">Services</a>
-        <a href="#" class="mobile-nav-link">Reviews</a>
-        <a href="#" class="mobile-nav-link"> Courses</a>
-        <a href="#" class="mobile-nav-link">Contacts</a>
-      </nav>
+
+    <!-- mobile menu -->
+    <div class="mobile-menu-wrap">
+      <ul class="header-menu-mobile">
+        <li class="header-burger js-menu-open">
+          <svg class="header-burger-icon" width="30" height="20">
+            <use href="./images/svg-icons.svg#icon-burger"></use>
+          </svg>
+        </li>
+        <li class="header-item">
+          <address class="header-phone">
+            <a href="tel:+380961111111" class="header-phone-link"
+              >+38 096 111 11 11</a
+            >
+          </address>
+          <a href="#" class="header-telegram-link">Write to us</a>
+        </li>
+        <li class="header-item">
+          <a href="#" class="logo">BE</a>
+        </li>
+      </ul>
+      <!-- modal menu -->
+      <div class="modal-menu js-modal-menu is-hidden">
+        <button type="button" class="mobile-menu-close js-menu-close">
+          <svg class="modal-close-icon" width="24" height="24">
+            <use
+              class="menu-close-cross"
+              href="./images/svg-icons.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+        <nav class="mobile-header-nav">
+          <a href="./index.html" class="mobile-nav-link">Home</a>
+          <a href="./about.html" class="mobile-nav-link">About</a>
+          <a href="#" class="mobile-nav-link">Services</a>
+          <a href="#" class="mobile-nav-link">Reviews</a>
+          <a href="#" class="mobile-nav-link"> Courses</a>
+          <a href="#" class="mobile-nav-link">Contacts</a>
+        </nav>
+      </div>
     </div>
   </div>
 </header>

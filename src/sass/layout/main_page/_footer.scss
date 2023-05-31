@@ -3,12 +3,20 @@
 }
 
 .contacts-title {
-  margin-bottom: 31px;
+  display: none;
+}
+
+.contacts-title.visible {
+  display: block;
+}
+
+.contact-info {
+  margin-top: 31px;
   @include adaptive(tablet) {
-    margin-bottom: 50px;
+    margin-top: 50px;
   }
   @include adaptive(desktop) {
-    margin-bottom: 80px;
+    margin-top: 80px;
   }
 }
 
@@ -31,8 +39,7 @@
     margin-bottom: 80px;
   }
 }
-.contact-item {
-}
+
 .contact-link {
   font-weight: 900;
   font-size: 13px;
@@ -90,7 +97,7 @@
     padding: 0;
   }
 }
-.footer-nav {
+.footer-nav-list {
   display: none;
   @include adaptive(desktop) {
     display: flex;
@@ -112,12 +119,4 @@
   @include adaptive(tablet) {
     display: block;
   }
-}
-.facebook-icon {
-}
-.facebook {
-}
-.instagram-icon {
-}
-.instagram {
 }

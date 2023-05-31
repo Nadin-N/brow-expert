@@ -5,7 +5,8 @@
   right: 0;
   top: 0;
   z-index: 1000;
-  background-color: var(--bg-color-main);
+  background-color: var(--bg-color-header);
+  color: var(--text-color-secondary);
   padding-top: 14px;
   padding-bottom: 14px;
   @include adaptive(mobile-large) {
@@ -13,6 +14,12 @@
     padding-bottom: 32px;
   }
 }
+
+.header.header-main {
+  background-color: var(--bg-color-main);
+  color: var(--text-color-main);
+}
+
 .header-menu-desk {
   display: none;
   @include adaptive(tablet) {
@@ -35,7 +42,7 @@
   }
 }
 
-.header-nav {
+.header-nav-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +61,7 @@
 }
 
 .logo {
+  display: block;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -65,7 +73,7 @@
     display: block;
     width: 44px;
     height: 4px;
-    background-color: var(--bg-color-header);
+    background-color: var(--bg-color-main);
   }
   @include adaptive(tablet) {
     font-size: 40px;
@@ -77,7 +85,15 @@
     }
   }
 }
-.header-menu-desk li:nth-child(2) {
+
+.header.header-main .logo {
+  &::before,
+  &::after {
+    background-color: var(--bg-color-header);
+  }
+}
+
+.header-menu-desk > li:nth-child(2) {
   @include adaptive(tablet-only) {
     order: -1;
     width: 100%;
@@ -85,11 +101,42 @@
   }
 }
 
+.current-page-main {
+  text-align: center;
+  line-height: 1.7;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 76px;
+    height: 1px;
+    background-color: var(--bg-color-header);
+  }
+}
+
+.current-page {
+  text-align: center;
+  line-height: 1.7;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 76px;
+    height: 1px;
+    background-color: var(--bg-color-main);
+  }
+}
+
 // !MOBILE MENU
 
 .header-burger-icon {
+  fill: var(--text-color-secondary);
+}
+
+.header.header-main .header-burger-icon {
   fill: var(--text-color-main);
 }
+
 .header-menu-mobile {
   display: flex;
   justify-content: space-between;
@@ -105,6 +152,7 @@
 
 // !MODAL MENU
 .modal-menu {
+  color: var(--text-color-main);
   @include adaptive(tablet) {
     display: none;
   }
@@ -124,6 +172,8 @@
   margin-bottom: 60px;
 }
 .mobile-header-nav {
+  font-size: 20px;
+  line-height: 115%; /* 23/20 */
   display: flex;
   flex-direction: column;
   text-align: center;

@@ -26,18 +26,7 @@ body {
 .wrapper > main {
   flex-grow: 1;
 }
-.current-page {
-  text-align: center;
-  line-height: 1.7;
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    width: 76px;
-    height: 1px;
-    background-color: var(--bg-color-header);
-  }
-}
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;

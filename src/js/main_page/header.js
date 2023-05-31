@@ -5,9 +5,12 @@ class Header {
       closeMenuBtn: document.querySelector('.js-menu-close'),
       menu: document.querySelector('.js-modal-menu'),
       body: document.querySelector('body'),
+      header: document.querySelector('.js-header'),
+      menuItems: document.querySelectorAll('.js-nav-item'),
     };
 
     this.addListeners();
+    this.changeColor();
   }
 
   addListeners() {
@@ -17,6 +20,25 @@ class Header {
       this.toggleMenu.bind(this)
     );
     this.refs.menu.addEventListener('click', this.removeMenu.bind(this));
+  }
+
+  changeColor() {
+    let itemClassName = null;
+
+    if (window.location.href.includes('index.html')) {
+      this.refs.header.classList.add('header-main');
+      itemClassName = 'current-page-main';
+    } else {
+      itemClassName = 'current-page';
+    }
+
+    this.refs.menuItems.forEach(item => {
+      let itemName = item.dataset.path;
+
+      window.location.href.includes(itemName)
+        ? item.classList.add(itemClassName)
+        : item.classList.remove(itemClassName);
+    });
   }
 
   toggleMenu() {
