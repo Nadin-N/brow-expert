@@ -1,4 +1,4 @@
-import './js/header';
-import './js/hero-slider';
-import './js/services';
-import './js/reviews-slider';
+import './js/main_page/header';
+import './js/main_page/hero-slider';
+import './js/main_page/services';
+import './js/main_page/reviews-slider';
