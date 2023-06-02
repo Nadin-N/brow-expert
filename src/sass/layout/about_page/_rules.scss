@@ -1,0 +1,121 @@
+.rules {
+  position: relative;
+  background-color: var(--bg-color-main);
+  padding: 36px 0;
+  @include adaptive(desktop) {
+    padding-bottom: 83px;
+  }
+}
+.rules-title {
+  margin-bottom: 12px;
+  @include adaptive(desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.rules-info {
+  line-height: 154.545455%; /* 17/11 */
+  margin-bottom: 36px;
+  @include adaptive(desktop) {
+    font-size: 15px;
+    line-height: 146.666667%; /* 22/15 */
+  }
+}
+.rules-spray-img {
+  position: absolute;
+  z-index: 1;
+  top: 4%;
+  left: 60%;
+  width: 170px;
+  transform: translate(-50%, 0%) rotate(10deg);
+  @include adaptive(desktop) {
+    width: 310px;
+    top: -2%;
+    left: 55%;
+  }
+}
+.rules-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  @include adaptive(desktop) {
+    gap: 24px;
+  }
+}
+.rules-item {
+  position: relative;
+  width: 144px;
+  min-height: 204px;
+  background-color: var(--bg-color-secondary);
+  padding: 7px;
+  overflow: hidden;
+  @include adaptive(desktop) {
+    width: 282px;
+    min-height: 368px;
+    padding: 15px;
+  }
+}
+.rules-number {
+  @include centeredFlex;
+  width: 60px;
+  height: 60px;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 117.5%; /* 47/40 */
+  text-transform: uppercase;
+  color: #ff312e;
+  border: 4px solid #ffffff;
+
+  @include adaptive(desktop) {
+    width: 120px;
+    height: 120px;
+    font-size: 66px;
+    line-height: 116.666667%; /* 77/66 */
+  }
+}
+.rules-description {
+  position: absolute;
+  top: 28%;
+  right: 5%;
+  text-align: right;
+  width: 120px;
+
+  @include adaptive(desktop) {
+    width: 200px;
+    top: 30%;
+    right: 6%;
+  }
+}
+.rules-description-title {
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 120%; /* 18/15 */
+  text-transform: uppercase;
+
+  color: var(--text-color-main);
+  margin-bottom: 7px;
+  @include adaptive(desktop) {
+    font-size: 22px;
+    line-height: 118.181818%; /* 26/22 */
+    margin-bottom: 17px;
+  }
+}
+.rules-description-text {
+  line-height: 154.545455%; /* 17/11 */
+  @include adaptive(desktop) {
+    font-size: 15px;
+    line-height: 146.666667%; /* 22/15 */
+  }
+}
+.rules-tweezers-img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, 8%);
+  width: 145px;
+  @include adaptive(desktop) {
+    width: 414px;
+    transform: translate(-50%);
+  }
+}

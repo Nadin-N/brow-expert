@@ -1,4 +1,4 @@
-// !DESCTOP/TABLET HEADER
+// !DESKTOP/TABLET HEADER
 .header {
   position: fixed;
   left: 0;
@@ -102,6 +102,7 @@
 }
 
 .current-page-main {
+  position: relative;
   text-align: center;
   line-height: 1.7;
   &::before,
@@ -110,6 +111,9 @@
     display: block;
     width: 76px;
     height: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     background-color: var(--bg-color-header);
   }
 }
@@ -171,7 +175,7 @@
 .mobile-menu-close {
   margin-bottom: 60px;
 }
-.mobile-header-nav {
+.modal-nav-list {
   font-size: 20px;
   line-height: 115%; /* 23/20 */
   display: flex;
@@ -185,7 +189,7 @@
     background-color: var(--bg-color-header);
   }
 }
-.mobile-nav-link {
+.modal-nav-item {
   &:first-child {
     margin-top: 22px;
   }

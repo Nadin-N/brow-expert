@@ -7,10 +7,13 @@ class Header {
       body: document.querySelector('body'),
       header: document.querySelector('.js-header'),
       menuItems: document.querySelectorAll('.js-nav-item'),
+      modalMenuItems: document.querySelectorAll('.js-modal-item'),
+      defaultModalLink: document.querySelector('[data-path ="index"]'),
     };
 
     this.addListeners();
-    this.changeColor();
+    this.changeHeaderTheme();
+    this.defineModalCurrentPageLink();
   }
 
   addListeners() {
@@ -22,7 +25,7 @@ class Header {
     this.refs.menu.addEventListener('click', this.removeMenu.bind(this));
   }
 
-  changeColor() {
+  changeHeaderTheme() {
     const dataPathArr = [];
 
     this.refs.menuItems.forEach(item => {
@@ -42,6 +45,30 @@ class Header {
     isSecondaryPage
       ? this.refs.header.classList.remove('header-main')
       : this.refs.header.classList.add('header-main');
+  }
+
+  defineModalCurrentPageLink() {
+    const dataPathArr = [];
+
+    this.refs.modalMenuItems.forEach(item => {
+      let itemName = item.dataset.path;
+
+      dataPathArr.push(itemName);
+
+      window.location.href.includes(itemName)
+        ? item.classList.add('current-page-main')
+        : item.classList.remove('current-page-main');
+    });
+
+    const isIncludeAnyLink = dataPathArr.some(item =>
+      window.location.href.includes(item)
+    );
+
+    if (!isIncludeAnyLink) {
+      console.log(isIncludeAnyLink);
+      console.log(this.refs.defaultModalLink);
+      this.refs.defaultModalLink.classList.add('current-page-main');
+    }
   }
 
   toggleMenu() {
