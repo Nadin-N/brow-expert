@@ -2283,4 +2283,86 @@ ul.masterschool-list {
         -ms-transform: translate(-50%);
             transform: translate(-50%);
   }
+}
+
+.command {
+  position: relative;
+  background-color: var(--bg-color-secondary);
+  text-align: center;
+  padding-bottom: 36px;
+}
+
+.command-title {
+  margin-bottom: 12px;
+}
+
+.achievements-info {
+  line-height: 154.545455%; /* 17/11 */
+  text-align: center;
+  width: 247px;
+  margin: 0 auto 36px;
+}
+
+.command-buttons-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  border-top: 1px solid rgba(34, 34, 34, 0.2);
+  border-bottom: 1px solid rgba(34, 34, 34, 0.2);
+  margin-bottom: 12px;
+}
+
+.command-button {
+  font-size: 13px;
+  line-height: 115.384615%; /* 15/13 */
+  padding: 12px;
+}
+
+.command-swipers {
+  width: 100%;
+  height: 100%;
+}
+
+.masters-slide {
+  text-align: center;
+  background: #fff;
+}
+
+.master-img,
+.teacher-img {
+  width: 220px;
+  margin-bottom: 18px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.master-about,
+.teachers-about {
+  width: 232px;
+}
+
+.master-name,
+.teachers-name {
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 120%; /* 18/15 */
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.master-info,
+.teachers-info {
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */

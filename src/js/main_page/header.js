@@ -65,8 +65,6 @@ class Header {
     );
 
     if (!isIncludeAnyLink) {
-      console.log(isIncludeAnyLink);
-      console.log(this.refs.defaultModalLink);
       this.refs.defaultModalLink.classList.add('current-page-main');
     }
   }

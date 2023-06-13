@@ -11,8 +11,4 @@ new Swiper('.hero-swiper', {
     el: '.hero-pagination',
     clickable: true,
   },
-
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 });
