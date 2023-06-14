@@ -4,7 +4,7 @@ new Swiper('.js-command-swiper', {
   modules: [Pagination],
   direction: 'horizontal',
   initialSlide: 1,
-  spaceBetween: 10,
+  spaceBetween: 5,
 
   pagination: {
     el: '.command-pagination',
@@ -25,7 +25,7 @@ class commandSlider {
     console.log(this.refs.commandSlides);
     const windowWidth = window.screen.width;
 
-    windowWidth < 600
+    windowWidth < 680
       ? this.refs.commandSlides.forEach(slide => {
           slide.classList.add('swiper-slide');
         })
