@@ -1,0 +1,72 @@
+.contact-modal-backdrop {
+  position: fixed;
+  z-index: 400;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms ease;
+  overflow: auto;
+}
+
+.is-contact-modal-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.contact-modal {
+  overflow: auto;
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 600px;
+
+  max-height: 600px;
+  padding: 20px;
+  background: var(--bg-color-main);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  transition: opacity 250ms ease;
+
+  .contact-modal-backdrop.is-contact-modal-hidden & {
+    transform: translate(-50%, 0%) scaleY(0);
+  }
+  @include adaptive(tablet) {
+    max-height: 400px;
+    padding: 30px;
+  }
+}
+.contact-modal-close-icon {
+  stroke: var(--bg-color-header);
+  transition: stroke 250ms ease;
+  .contact-close-btn:is(:hover, :focus) & {
+    stroke: var(--accent-color);
+  }
+}
+
+.contact-close-btn {
+  position: sticky;
+  display: block;
+  margin-left: auto;
+  transform: translate(15px, 0px);
+  top: 0;
+  right: 0;
+  @include adaptive(tablet) {
+    transform: translate(20px, 0px);
+  }
+}
+
+.contact-modal-text {
+  @include adaptive(desktop) {
+    font-size: 15px;
+    line-height: 146.666667%; /* 22/15 */
+  }
+}
