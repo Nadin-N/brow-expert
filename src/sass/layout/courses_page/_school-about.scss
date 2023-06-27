@@ -1,23 +1,23 @@
-.courses-info {
+.school-about {
   position: relative;
   padding-top: 48px;
   padding-bottom: 72px;
 }
 
-.courses-info-title {
+.school-about-title {
   margin-bottom: 36px;
   @include adaptive(desktop) {
     margin-bottom: 70px;
   }
 }
 
-.courses-info-box {
+.school-about-box {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.courses-info-row {
+.school-about-row {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -32,7 +32,7 @@
   }
 }
 
-.courses-info-item {
+.school-about-item {
   @include adaptive(desktop) {
     width: 486px;
     height: 486px;
@@ -41,7 +41,7 @@
     justify-content: center;
   }
 }
-.courses-info-subtitle {
+.school-about-subtitle {
   font-weight: 900;
   font-size: 15px;
   line-height: 120%; /* 18/15 */
@@ -54,7 +54,7 @@
   }
 }
 
-.courses-info-description {
+.school-about-description {
   line-height: 154.545455%; /* 17/11 */
   &:not(:last-child) {
     margin-bottom: 17px;
@@ -66,7 +66,7 @@
   }
 }
 
-.courses-background {
+.school-about-background {
   position: relative;
   width: 300px;
   height: 300px;
@@ -82,7 +82,7 @@
   }
 }
 
-.courses-tweezers-img {
+.school-about-tweezers-img {
   position: absolute;
   right: 5px;
   top: 74px;
@@ -95,7 +95,7 @@
   }
 }
 
-.courses-dye-img {
+.school-about-dye-img {
   position: absolute;
   right: -5px;
   top: 90px;
@@ -106,7 +106,7 @@
   }
 }
 
-.courses-spray-img {
+.school-about-spray-img {
   position: absolute;
   left: 40px;
   bottom: -10px;
@@ -120,7 +120,7 @@
   }
 }
 
-.courses-pencil-img {
+.school-about-pencil-img {
   position: absolute;
   left: -15px;
   bottom: 30px;
@@ -134,7 +134,7 @@
   }
 }
 
-.courses-corrector-img {
+.school-about-corrector-img {
   position: absolute;
   left: 30px;
   top: 15px;
@@ -148,7 +148,7 @@
   }
 }
 
-.courses-brushes-img {
+.school-about-brushes-img {
   position: absolute;
   display: none;
   @include adaptive(desktop) {
@@ -160,15 +160,17 @@
   }
 }
 
-.courses-corrector-img-2 {
+.school-about-corrector-img-2 {
+  z-index: 2;
   position: absolute;
-  bottom: -23px;
+  bottom: -18px;
   left: 45px;
   width: 140px;
+  height: 140px;
   transform: rotate(-135deg);
 }
 
-.courses-certificate-img {
+.school-about-certificate-img {
   @include adaptive(desktop) {
     position: absolute;
     bottom: -150px;

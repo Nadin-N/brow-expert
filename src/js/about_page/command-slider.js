@@ -22,7 +22,6 @@ class commandSlider {
   }
 
   transformSlider() {
-    console.log(this.refs.commandSlides);
     const windowWidth = window.screen.width;
 
     windowWidth < 680
