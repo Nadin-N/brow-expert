@@ -1,0 +1,195 @@
+<div class="modal-backdrop js-appointment-modal-backdrop is-modal-hidden">
+  <div class="appointment-modal">
+    <button
+      type="button"
+      class="js-appointment-modal-close appointment-close-btn"
+    >
+      <svg
+        class="appointment-modal-close-icon js-appointment-modal-close"
+        width="12"
+        height="12"
+      >
+        <use
+          class="appointment-modal-close-cross"
+          href="./images/svg-icons.svg#icon-close2"
+        ></use>
+      </svg>
+    </button>
+    <div class="appointment-box">
+      <h2 class="appointment-tittle">Make an appointment</h2>
+      <p class="appointment-description">
+        To make an appointment, please fill out this form
+      </p>
+      <form class="appointment-form js-appointment-form">
+        <div class="appointment-field double">
+          <input
+            type="text"
+            name="name"
+            required
+            autocomplete="true"
+            placeholder="Name"
+            class="appointment-input js-appointment-form-input"
+            min="2"
+          />
+          <input
+            type="text"
+            name="phone"
+            required
+            autocomplete="true"
+            placeholder="Phone"
+            class="appointment-input js-appointment-form-input"
+          />
+        </div>
+        <div class="appointment-field">
+          <div class="appointment-dropdown appointment-input">
+            <button
+              type="button"
+              class="appointment-dropdown-button js-appointment-dropdown-button"
+              value=""
+            >
+              Service
+            </button>
+            <ul
+              class="appointment-dropdown-list js-appointment-dropdown-list"
+              data-value="services"
+            >
+              <li class="appointment-dropdown-list-item" data-value="e-design">
+                Eyebrow design
+              </li>
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="e-coloring"
+              >
+                Eyebrow design and coloring
+              </li>
+              <li class="appointment-dropdown-list-item" data-value="tinting">
+                Spa henna eyelash tinting
+              </li>
+              <li class="appointment-dropdown-list-item" data-value="threading">
+                Facial threading
+              </li>
+              <li class="appointment-dropdown-list-item" data-value="waxing">
+                Facial waxing
+              </li>
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="lamination"
+              >
+                Eyelash lamination
+              </li>
+              <li class="appointment-dropdown-list-item" data-value="botox">
+                Eyelash botox
+              </li>
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="extensions"
+              >
+                Eyelash extensions
+              </li>
+            </ul>
+            <ul
+              class="appointment-dropdown-list js-appointment-dropdown-list is-hidden"
+              data-value="courses"
+            >
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="brow-artist"
+              >
+                Brow artist
+              </li>
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="expert-brow-stylist"
+              >
+                Expert brow stylist
+              </li>
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="eyelash-lamination"
+              >
+                Eyelash lamination
+              </li>
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="brow-shaping"
+              >
+                Brow Design and Shaping
+              </li>
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="microblading"
+              >
+                Microblading and Micropigmentation
+              </li>
+              <li
+                class="appointment-dropdown-list-item"
+                data-value="brow-tinting"
+              >
+                Advanced Brow Tinting and Lash Lift
+              </li>
+            </ul>
+            <input
+              type="text"
+              name="appointment-order-item"
+              value=""
+              class="appointment-dropdown-input-hidden"
+            />
+          </div>
+        </div>
+        <div class="appointment-field double">
+          <input
+            type="text"
+            name="date"
+            required
+            placeholder="Date"
+            class="appointment-input js-appointment-form-input"
+          />
+          <input
+            type="text"
+            name="time"
+            required
+            placeholder="Time (08.00 -19.00)"
+            class="appointment-input js-appointment-form-input"
+          />
+        </div>
+        <div class="appointment-field">
+          <textarea
+            class="appointment-input js-appointment-form-input"
+            name="comment"
+            placeholder="Comment"
+          ></textarea>
+        </div>
+        <div class="appointment-field">
+          <input
+            type="checkbox"
+            id="appointment-condition"
+            name="agreement"
+            required
+            value="yes"
+            class="agreement-check visually-hidden"
+          />
+          <label for="appointment-condition" class="check-label">
+            <span class="check-icon-wrap">
+              <svg class="check-icon" width="19" height="18">
+                <use href="./images/svg-icons.svg#check"></use>
+              </svg>
+            </span>
+            <span class="conditions">
+              I consent to the
+              <button
+                type="button"
+                class="check-modal-link js-check-modal-link"
+              >
+                processing of personal data
+              </button></span
+            >
+          </label>
+        </div>
+        <button type="submit" class="action-button appointment-detail-button">
+          Send
+        </button>
+      </form>
+      <div class="appointment-message js-appointment-message"></div>
+    </div>
+  </div>
+</div>

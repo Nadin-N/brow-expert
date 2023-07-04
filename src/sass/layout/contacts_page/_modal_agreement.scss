@@ -1,42 +1,20 @@
-.contact-modal-backdrop {
-  position: fixed;
-  z-index: 400;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms ease;
-  overflow: auto;
-}
-
-.is-contact-modal-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-body.no-scroll {
-  overflow: hidden;
-}
-
 .contact-modal {
   overflow: auto;
   position: absolute;
-  z-index: 1000;
+  z-index: 7;
   top: 50%;
   left: 50%;
   width: 90%;
   max-width: 600px;
-
   max-height: 600px;
   padding: 20px;
   background: var(--bg-color-main);
   border: 2px solid var(--accent-color);
-  border-radius: 10px;
+  border-radius: 5px;
   transform: translate(-50%, -50%);
   transition: opacity 250ms ease;
 
-  .contact-modal-backdrop.is-contact-modal-hidden & {
+  .contact-modal-backdrop.is-modal-hidden & {
     transform: translate(-50%, 0%) scaleY(0);
   }
   @include adaptive(tablet) {
@@ -44,6 +22,7 @@ body.no-scroll {
     padding: 30px;
   }
 }
+
 .contact-modal-close-icon {
   stroke: var(--bg-color-header);
   transition: stroke 250ms ease;

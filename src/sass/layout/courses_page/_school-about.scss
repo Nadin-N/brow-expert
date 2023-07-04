@@ -168,6 +168,9 @@
   width: 140px;
   height: 140px;
   transform: rotate(-135deg);
+  @include adaptive(tablet) {
+    display: none;
+  }
 }
 
 .school-about-certificate-img {

@@ -1,0 +1,227 @@
+.appointment-modal {
+  position: absolute;
+  z-index: 7;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 300px;
+  padding: 15px;
+  background: var(--bg-color-main);
+  transform: translate(-50%, -50%);
+  transition: opacity 250ms ease;
+
+  .appointment-modal-backdrop.is-modal-hidden & {
+    transform: translate(-50%, 0%) scaleY(0);
+  }
+  @include adaptive(tablet) {
+    max-width: 464px;
+    padding: 40px;
+  }
+  @include adaptive(desktop) {
+    max-width: 544px;
+    padding: 80px;
+  }
+}
+
+.appointment-close-btn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 28px;
+  height: 28px;
+  background-color: var(--bg-color-header);
+  &:is(:hover, :focus) {
+    background-color: var(--accent-color);
+  }
+  @include adaptive(tablet) {
+    width: 32px;
+    height: 32px;
+    right: -16px;
+    top: -16px;
+  }
+}
+
+.appointment-box {
+  text-align: center;
+}
+
+.appointment-tittle {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 127.272727%; /* 28/22 */
+  text-transform: uppercase;
+  margin-bottom: 17px;
+  @include adaptive(tablet) {
+    font-size: 18px;
+  }
+  @include adaptive(desktop) {
+    font-size: 22px;
+  }
+}
+
+.appointment-description {
+  width: 259px;
+  font-size: 11px;
+  line-height: 146.666667%; /* 22/15 */
+  margin: 0 auto 16px;
+  @include adaptive(tablet) {
+    font-size: 13px;
+  }
+  @include adaptive(desktop) {
+    font-size: 15px;
+  }
+}
+
+.appointment-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 11px;
+  line-height: 146.666667%; /* 22/15 */
+  margin-bottom: 20px;
+  &:last-child {
+    text-align: left;
+  }
+  @include adaptive(tablet) {
+    gap: 16px;
+    font-size: 13px;
+  }
+  @include adaptive(desktop) {
+    font-size: 15px;
+  }
+}
+
+.appointment-field.double {
+  display: flex;
+  gap: 12px;
+  @include adaptive(tablet) {
+    gap: 16px;
+  }
+}
+
+.appointment-input {
+  width: 100%;
+  height: 40px;
+  padding: 12px;
+  border: 1px solid rgba(34, 34, 34, 0.2);
+  &:is(:hover, :focus) {
+    outline: 1px solid var(--accent-color);
+  }
+  &:focus::placeholder {
+    opacity: 0;
+  }
+  @include adaptive(tablet) {
+    height: 40px;
+  }
+  @include adaptive(desktop) {
+    height: 50px;
+    padding: 16px;
+  }
+}
+
+textarea.appointment-input {
+  height: 100px;
+  resize: none;
+}
+
+// !! DROPDOWN
+
+.appointment-dropdown {
+  position: relative;
+}
+
+.appointment-dropdown-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: rgba(34, 34, 34, 0.8);
+  outline: none;
+  cursor: pointer;
+}
+
+.appointment-dropdown-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: var(--text-color-main) transparent transparent transparent;
+}
+
+.appointment-dropdown-button-clicked.appointment-dropdown-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent var(--text-color-main) transparent;
+}
+
+.appointment-dropdown-list {
+  z-index: 3;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  left: 0;
+  top: 50px;
+  background: #ffffff;
+  overflow: hidden;
+  width: 100.5%;
+  margin-left: -0.7px;
+  border: 1px solid rgba(34, 34, 34, 0.2);
+  @include adaptive(tablet) {
+    top: 58px;
+  }
+}
+
+.appointment-dropdown-list-visible {
+  display: block;
+}
+
+.appointment-dropdown-list-item {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  line-height: 300%;
+  padding-left: 16px;
+  background: #ffffff;
+  &:hover {
+    background: rgba(34, 34, 34, 0.1);
+  }
+
+  @include adaptive(tablet) {
+    font-size: 13px;
+    line-height: 260%;
+  }
+  @include adaptive(tablet) {
+    font-size: 15px;
+  }
+}
+
+.appointment-dropdown-input-hidden {
+  display: none;
+}
+
+.appointment-detail-button {
+  margin: 0 auto;
+}
+.appointment-message {
+  font-size: 15px;
+  font-weight: 900;
+  height: 20px;
+  color: red;
+}

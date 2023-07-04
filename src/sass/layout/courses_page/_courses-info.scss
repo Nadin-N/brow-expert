@@ -20,6 +20,7 @@
   margin: 0 auto 36px;
   text-align: center;
   @include adaptive(tablet) {
+    width: 363px;
     font-size: 15px;
     line-height: 146.666667%; /* 22/15 */
     margin: 0 auto 80px;

@@ -1,0 +1,144 @@
+.feedback {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 35px;
+  @include adaptive(tablet) {
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+  @include adaptive(desktop) {
+    padding-top: 120px;
+    padding-bottom: 160px;
+  }
+}
+
+.feedback-title {
+  margin-bottom: 12px;
+  @include adaptive(tablet) {
+    margin-bottom: 32px;
+  }
+}
+
+.feedback-info-text {
+  margin-bottom: 36px;
+  line-height: 154.545455%; /* 17/11 */
+  @include adaptive(tablet) {
+    width: 363px;
+    font-size: 15px;
+    line-height: 146.666667%; /* 22/15 */
+    margin-bottom: 114px;
+  }
+}
+
+.feedback-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  @include adaptive(tablet) {
+    gap: 36px;
+  }
+  @include adaptive(desktop) {
+    gap: 74px;
+  }
+}
+
+.feedback-item {
+  position: relative;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  width: 300px;
+  height: 150px;
+  background-color: var(--bg-color-secondary);
+  padding: 18px;
+  @include adaptive(tablet) {
+    align-items: center;
+    gap: 0;
+    width: 80%;
+    height: 347px;
+    padding: 0 0 30px 139px;
+  }
+  @include adaptive(desktop) {
+    width: 996px;
+    padding: 0 0 30px 189px;
+  }
+}
+
+.feedback-user-photo {
+  width: 48px;
+  @include adaptive(tablet) {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 160px;
+  }
+}
+
+.feedback-user-info {
+  @include adaptive(tablet) {
+    width: 400px;
+  }
+  @include adaptive(desktop) {
+    width: 555px;
+  }
+}
+
+.feedback-user-name {
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 120%; /* 18/15 */
+  text-transform: uppercase;
+  margin-bottom: 11px;
+  @include adaptive(tablet) {
+    font-size: 22px;
+    line-height: 118.181818%; /* 26/22 */
+    margin-bottom: 29px;
+  }
+}
+
+.feedback-user-comment {
+  font-size: 10px;
+  line-height: 140%;
+  @include adaptive(tablet) {
+    font-size: 15px;
+    line-height: 146.666667%; /* 22/15 */
+  }
+}
+
+.feedback-dye-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 138px;
+  height: 138px;
+  transform: translate(-30%, 50%) rotate(-10deg);
+  pointer-events: none;
+
+  @include adaptive(desktop) {
+    top: 624px;
+    right: 100px;
+    width: 420px;
+    height: 420px;
+    transform: translate(-50%, 25%) rotate(20deg);
+  }
+}
+.feedback-brush-img {
+  position: absolute;
+  top: 255px;
+  right: 10px;
+  width: 170px;
+  height: 170px;
+  transform: rotate(-10deg);
+  pointer-events: none;
+  @include adaptive(tablet) {
+    top: 624px;
+    right: 100px;
+    transform: rotate(20deg);
+  }
+  @include adaptive(desktop) {
+    width: 420px;
+    height: 420px;
+    transform: rotate(0deg);
+  }
+}

@@ -98,8 +98,7 @@
             name="phone"
             required
             autocomplete="true"
-            placeholder="Phone format 067-888-99-00"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="Phone"
             class="contacts-details-input js-contact-form-input"
           />
         </div>
@@ -118,19 +117,22 @@
             name="agreement"
             required
             value="yes"
-            class="contacts-details-check visually-hidden"
+            class="agreement-check visually-hidden"
           />
-          <label for="contacts-condition" class="contacts-check-label">
+          <label for="contacts-condition" class="check-label">
             <span class="check-icon-wrap">
-              <svg class="contacts-check-icon" width="19" height="18">
+              <svg class="check-icon" width="19" height="18">
                 <use href="./images/svg-icons.svg#check"></use>
               </svg>
             </span>
-            <span class="contacts-conditions">
+            <span class="conditions">
               I consent to the
-              <a href="" class="contacts-modal-link js-contacts-modal-link"
-                >processing of personal data</a
-              ></span
+              <button
+                type="button"
+                class="check-modal-link js-check-modal-link"
+              >
+                processing of personal data
+              </button></span
             >
           </label>
         </div>

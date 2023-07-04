@@ -3,7 +3,7 @@ class ModalAgreement {
 
   constructor() {
     this.refs = {
-      openModalAgreement: document.querySelector('.js-contacts-modal-link'),
+      openModalAgreement: document.querySelectorAll('.js-check-modal-link'),
       closeModalAgreement: document.querySelector('.js-contact-modal-close'),
       modalAgreement: document.querySelector('.js-contact-modal-backdrop'),
       body: document.querySelector('body'),
@@ -13,10 +13,10 @@ class ModalAgreement {
   }
 
   addListener() {
-    this.refs.openModalAgreement.addEventListener(
-      'click',
-      this.onOpenModal.bind(this)
+    this.refs.openModalAgreement.forEach(item =>
+      item.addEventListener('click', this.onOpenModal.bind(this))
     );
+
     this.refs.closeModalAgreement.addEventListener(
       'click',
       this.onOpenModal.bind(this)
@@ -24,13 +24,9 @@ class ModalAgreement {
   }
 
   onOpenModal(event) {
-    event.preventDefault();
-
-    this.refs.modalAgreement.classList.toggle('is-contact-modal-hidden');
+    this.refs.modalAgreement.classList.toggle('is-modal-hidden');
     this.refs.body.classList.toggle('no-scroll');
-    if (
-      !this.refs.modalAgreement.classList.contains('is-contact-modal-hidden')
-    ) {
+    if (!this.refs.modalAgreement.classList.contains('is-modal-hidden')) {
       document.addEventListener('keydown', this.onCloseBtnPress.bind(this));
       document.addEventListener(
         'click',
@@ -52,7 +48,7 @@ class ModalAgreement {
       return;
     }
 
-    this.refs.modalAgreement.classList.add('is-contact-modal-hidden');
+    this.refs.modalAgreement.classList.add('is-modal-hidden');
     document.removeEventListener('keydown', this.onCloseBtnPress.bind(this));
     document.removeEventListener(
       'click',
@@ -66,7 +62,7 @@ class ModalAgreement {
       return;
     }
 
-    this.refs.modalAgreement.classList.add('is-contact-modal-hidden');
+    this.refs.modalAgreement.classList.add('is-modal-hidden');
     document.removeEventListener('keydown', this.onCloseBtnPress.bind(this));
     document.removeEventListener(
       'click',

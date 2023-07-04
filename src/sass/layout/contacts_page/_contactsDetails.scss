@@ -145,10 +145,10 @@ address.contacts-details-item {
   }
 }
 
-.contacts-check-label {
+.check-label {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
 .check-icon-wrap {
@@ -161,43 +161,29 @@ address.contacts-details-item {
   transition: border, background-color 0.3s ease;
   cursor: pointer;
 
-  .contacts-details-check:checked + .contacts-check-label & {
+  .agreement-check:checked + .check-label & {
     background-color: var(--accent-color);
     border: 2px solid transparent;
   }
-  .contacts-details-check:focus + .contacts-check-label & {
+  .agreement-check:focus + .check-label & {
     border-color: var(--accent-color);
   }
 }
 
-.contacts-check-icon {
+.check-icon {
   position: absolute;
   top: -2px;
   left: -2px;
   fill: transparent;
 
-  .contacts-details-check:checked + .contacts-check-label & {
+  .agreement-check:checked + .check-label & {
     fill: var(--bg-color-main);
   }
 }
 
-.contacts-modal-link {
-  position: relative;
+.check-modal-link {
   color: var(--accent-color);
   text-decoration: underline;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .contacts-details-input:focus::placeholder,

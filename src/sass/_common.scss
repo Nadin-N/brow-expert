@@ -37,18 +37,23 @@ body {
   width: 196px;
   height: 38px;
   background: transparent;
-  border: 1px solid #ff312e;
+  border: 1px solid var(--accent-color);
   border-radius: 100px;
   font-weight: 900;
   font-size: 11px;
   line-height: 118.181818%; /* 13/11 */
   text-transform: uppercase;
-  color: #ff312e;
+  color: var(--accent-color);
+  transition: all 250ms ease;
   @include adaptive(tablet) {
     width: 240px;
     height: 44px;
     font-size: 13px;
     line-height: 115.384615%; /* 15/13 */
+  }
+  &:is(:hover, :focus) {
+    background: var(--accent-color);
+    color: var(--text-color-secondary);
   }
 }
 
@@ -78,4 +83,38 @@ body {
     transform: translate(0px, -25px);
     margin-bottom: 15px;
   }
+}
+
+.is-modal-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 250ms ease;
+  overflow: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
