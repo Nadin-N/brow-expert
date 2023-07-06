@@ -156,6 +156,7 @@ address.contacts-details-item {
   display: inline-block;
   width: 19px;
   height: 18px;
+  flex-shrink: 0;
   border: 2px solid var(--bg-color-secondary);
   border-radius: 2px;
   transition: border, background-color 0.3s ease;

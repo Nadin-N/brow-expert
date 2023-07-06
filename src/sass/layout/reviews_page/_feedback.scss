@@ -116,11 +116,10 @@
   pointer-events: none;
 
   @include adaptive(desktop) {
-    top: 624px;
-    right: 100px;
-    width: 420px;
-    height: 420px;
-    transform: translate(-50%, 25%) rotate(20deg);
+    bottom: -100px;
+    width: 340px;
+    height: 340px;
+    transform: translate(-90%, 25%) rotate(20deg);
   }
 }
 .feedback-brush-img {
@@ -141,4 +140,73 @@
     height: 420px;
     transform: rotate(0deg);
   }
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: rgba(34, 34, 34, 0.4);
+
+  @include adaptive(tablet) {
+    justify-content: space-between;
+    padding: 0 170px;
+    margin-top: 40px;
+    font-size: 17px;
+  }
+}
+
+.numbered-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.numbered-buttons[data-state='current'] {
+  color: var(--accent-color);
+}
+
+.arrow-left,
+.arrow-right,
+.numbered-buttons {
+  &:is(:hover, :focus) {
+    color: var(--accent-color);
+  }
+}
+
+.arrow-left,
+.arrow-right {
+  &:is(:hover, :focus) {
+    & svg {
+      fill: var(--accent-color);
+    }
+  }
+}
+.arrow-left,
+.arrow-right {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  width: 97px;
+  height: 20px;
+  @include adaptive(tablet) {
+    gap: 15px;
+  }
+}
+
+.arrow-left svg,
+.arrow-right svg {
+  fill: rgba(34, 34, 34, 0.4);
+}
+
+.arrow-left[disabled='true'],
+.arrow-right[disabled='true'] {
+  color: rgba(34, 34, 34, 0.15);
+}
+.arrow-left[disabled='true'] svg,
+.arrow-right[disabled='true'] svg {
+  fill: rgba(34, 34, 34, 0.15);
 }
