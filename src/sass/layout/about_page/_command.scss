@@ -55,7 +55,8 @@
 .command-button.clicked {
   color: var(--text-color-main);
   @include adaptive(desktop) {
-    border-bottom: 1px dashed var(--text-color-main);
+    border-bottom: 1px dashed var(--accent-color);
+    color: var(--accent-color);
   }
 }
 
@@ -170,16 +171,6 @@
   display: flex;
   gap: 36px;
   justify-content: center;
-  // @include adaptive(tablet) {
-  //   flex-direction: column;
-  //   gap: 28px;
-  //   margin-top: 30px;
-  //   right: 20px;
-  // }
-  // @include adaptive(desktop) {
-  //   right: 40px;
-  //   gap: 40px;
-  // }
 }
 
 .command-pagination

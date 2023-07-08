@@ -12,7 +12,7 @@
   border: 2px solid var(--accent-color);
   border-radius: 5px;
   transform: translate(-50%, -50%);
-  transition: opacity 250ms ease;
+  transition: opacity 300ms ease;
 
   .contact-modal-backdrop.is-modal-hidden & {
     transform: translate(-50%, 0%) scaleY(0);
@@ -25,7 +25,7 @@
 
 .contact-modal-close-icon {
   stroke: var(--bg-color-header);
-  transition: stroke 250ms ease;
+  transition: stroke 300ms ease;
   .contact-close-btn:is(:hover, :focus) & {
     stroke: var(--accent-color);
   }

@@ -1,4 +1,10 @@
 import axios from 'axios';
+import { Loader } from './loader';
+
+console.log(Loader);
+
+const loader = new Loader();
+console.log(loader.startLoading);
 
 class UserApi {
   static BASE_URL = 'https://randomuser.me/api/';
@@ -42,6 +48,8 @@ class UserApi {
   }
 
   async fetchUserData(page = 1) {
+    loader.startLoading();
+
     const response = await axios.get(
       `${UserApi.BASE_URL}?page=${page}&results=${this.per_page}&inc=name,picture&nat=us&seed=foobar`
     );
@@ -88,10 +96,14 @@ class UserApi {
       )
       .join('');
 
-    this.refs.userList.innerHTML = markup;
+    setTimeout(() => {
+      this.refs.userList.innerHTML = markup;
+      loader.stopLoading();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500);
   }
 
-  renderPagination() {
+  changePaginationCommonRules() {
     this.refs.numberedPaginationButtons.forEach(button =>
       Number(button.textContent) === this.currentPage
         ? button.setAttribute('data-state', 'current')
@@ -131,7 +143,7 @@ class UserApi {
 
     this.currentPage = Number(event.target.textContent);
 
-    this.renderPagination();
+    this.changePaginationCommonRules();
     this.renderUserReviews(this.currentPage);
   }
 
@@ -148,7 +160,7 @@ class UserApi {
       );
     }
 
-    this.renderPagination();
+    this.changePaginationCommonRules();
     this.renderUserReviews(this.currentPage);
   }
 
@@ -173,7 +185,7 @@ class UserApi {
       );
     }
 
-    this.renderPagination();
+    this.changePaginationCommonRules();
     this.renderUserReviews(this.currentPage);
   }
 }

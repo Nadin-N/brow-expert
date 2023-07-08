@@ -44,16 +44,31 @@ body {
   line-height: 118.181818%; /* 13/11 */
   text-transform: uppercase;
   color: var(--accent-color);
-  transition: all 250ms ease;
+  &:is(:hover, :focus) {
+    background: var(--accent-color);
+    color: var(--text-color-secondary);
+  }
+
+  animation: pulse 3000ms linear infinite;
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0px 0px 0px var(--accent-color);
+    }
+    50% {
+      box-shadow: 2px 2px 7px var(--accent-color);
+    }
+
+    100% {
+      box-shadow: 0px 0px 0px var(--accent-color);
+    }
+  }
+
   @include adaptive(tablet) {
     width: 240px;
     height: 44px;
     font-size: 13px;
     line-height: 115.384615%; /* 15/13 */
-  }
-  &:is(:hover, :focus) {
-    background: var(--accent-color);
-    color: var(--text-color-secondary);
   }
 }
 
@@ -83,6 +98,40 @@ body {
     transform: translate(0px, -25px);
     margin-bottom: 15px;
   }
+
+  animation: section-title 1000ms linear;
+
+  @keyframes section-title {
+    0% {
+      transform: translate(0px, -50%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate(0px, 0%);
+      opacity: 1;
+    }
+  }
+}
+
+.section-title-black {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 116.666667%; /* 28/24 */
+  text-transform: uppercase;
+  &::after {
+    @include psevdoEl;
+    margin-top: 7px;
+  }
+  @include adaptive(tablet) {
+    font-size: 50px;
+    line-height: 117.5%; /* 94/80 */
+  }
+  @include adaptive(desktop) {
+    font-size: 80px;
+  }
+
+  animation: section-title 1000ms linear;
 }
 
 .is-modal-hidden {
@@ -117,4 +166,37 @@ body.no-scroll {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+a,
+button,
+a svg,
+button svg {
+  transition: all 300ms ease;
+}
+
+a {
+  &:is(:hover, :focus) {
+    color: var(--accent-color);
+    opacity: 1;
+  }
+}
+a {
+  &:is(:hover, :focus) {
+    & svg {
+      fill: var(--accent-color);
+    }
+  }
+}
+button {
+  &:is(:hover, :focus) {
+    & svg {
+      fill: var(--accent-color);
+    }
+  }
+}
+
+li svg:is(:hover, :focus) {
+  fill: var(--accent-color);
+  stroke: var(--accent-color);
 }

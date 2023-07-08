@@ -31,7 +31,7 @@
 }
 
 .header-address,
-.header-phone-link {
+.header-phone {
   font-size: 13px;
   line-height: 115.384615%; /* 15/13 */
   font-weight: 900;
@@ -67,6 +67,7 @@
   text-align: center;
   font-size: 24px;
   line-height: 116.666667%; /* 28/24 */
+
   &::before,
   &::after {
     content: '';
@@ -75,6 +76,21 @@
     height: 4px;
     background-color: var(--bg-color-main);
   }
+
+  // animation: pulse 2000ms linear infinite;
+
+  // @keyframes pulse {
+  //   0% {
+  //     transform: scale(1);
+  //   }
+  //   50% {
+  //     transform: scale(1.1);
+  //   }
+  //   100% {
+  //     transform: scale(1);
+  //   }
+  // }
+
   @include adaptive(tablet) {
     font-size: 40px;
     line-height: 117.5%; /* 47/40 */

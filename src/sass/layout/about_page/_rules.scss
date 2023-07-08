@@ -50,6 +50,11 @@
   background-color: var(--bg-color-secondary);
   padding: 7px;
   overflow: hidden;
+  transition: transform 300ms ease;
+  transform: scale(1);
+  &:is(:hover, :focus) {
+    transform: scale(1.05);
+  }
   @include adaptive(desktop) {
     width: 282px;
     min-height: 368px;

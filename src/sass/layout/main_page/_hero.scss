@@ -34,6 +34,30 @@
   font-size: 14px;
   line-height: 114.285714%; /* 16/14 */
   margin-bottom: 14px;
+
+  animation: appearance-title 2000ms linear;
+
+  @keyframes appearance-title {
+    0% {
+      transform: translate(-200px, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+
+    70% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    80% {
+      transform: scale(1.07);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   @include adaptive(tablet) {
     font-size: 30px;
     margin-bottom: 24px;
@@ -64,6 +88,25 @@
 .hero-text {
   line-height: 146.666667%; /* 22/15 */
   font-size: 10px;
+
+  animation: appearance-text 3000ms linear;
+
+  @keyframes appearance-text {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.07);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   @include adaptive(mobile-large) {
     margin-bottom: 10px;
   }
@@ -85,9 +128,25 @@
 .hero-button {
   display: none;
   margin: 0 auto;
-  //   @include adaptive(mobile-large) {
-  //     display: block;
-  //   }
+
+  animation: appearance-button 3000ms linear, pulse 2000ms linear infinite;
+
+  @keyframes appearance-button {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.07);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   @include adaptive(tablet) {
     margin: 0;
     display: block;

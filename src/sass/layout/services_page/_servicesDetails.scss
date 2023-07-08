@@ -29,6 +29,7 @@
 }
 
 .services-details-img {
+  z-index: 1;
   position: absolute;
   right: 0;
   top: 55px;
@@ -54,11 +55,14 @@
 }
 
 .service-item {
-  // width: 300px;
   display: flex;
   flex-direction: column;
   border: 4px solid var(--bg-color-secondary);
   padding: 18px;
+  transition: box-shadow 300ms ease;
+  &:is(:hover, :focus) {
+    box-shadow: 9px 9px 11px 2px rgba(150, 150, 150, 0.24);
+  }
   @include adaptive(tablet) {
     width: 324px;
     border: 6px solid var(--bg-color-secondary);

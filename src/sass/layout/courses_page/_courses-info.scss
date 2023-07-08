@@ -87,6 +87,7 @@
   width: 300px;
   padding: 18px;
   border: 6px solid var(--bg-color-main);
+
   @include adaptive(tablet) {
     width: 384px;
     padding: 18px;

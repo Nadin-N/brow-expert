@@ -159,7 +159,7 @@ address.contacts-details-item {
   flex-shrink: 0;
   border: 2px solid var(--bg-color-secondary);
   border-radius: 2px;
-  transition: border, background-color 0.3s ease;
+  transition: border, background-color 300ms ease;
   cursor: pointer;
 
   .agreement-check:checked + .check-label & {

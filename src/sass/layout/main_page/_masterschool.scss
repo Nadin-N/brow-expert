@@ -102,11 +102,45 @@ ul.masterschool-list {
   position: absolute;
   z-index: 2;
   left: 62%;
-  transform: translate(-50%, -22%);
   width: 160px;
   pointer-events: none;
+  animation: rotate-3 3000ms linear infinite;
+
+  @keyframes rotate-3 {
+    0% {
+      transform: translate(-50%, -22%) rotate(0deg);
+    }
+    25% {
+      transform: translate(-50%, -22%) rotate(2deg);
+    }
+    50% {
+      transform: translate(-50%, -22%) rotate(0deg);
+    }
+    75% {
+      transform: translate(-50%, -22%) rotate(-2deg);
+    }
+    100% {
+      transform: translate(-50%, -22%) rotate(0deg);
+    }
+  }
   @include adaptive(desktop) {
     width: 384px;
-    transform: translate(25%, -29%);
+    @keyframes rotate-3 {
+      0% {
+        transform: translate(25%, -29%) rotate(0deg);
+      }
+      25% {
+        transform: translate(25%, -29%) rotate(2deg);
+      }
+      50% {
+        transform: translate(25%, -29%) rotate(0deg);
+      }
+      75% {
+        transform: translate(25%, -29%) rotate(-2deg);
+      }
+      100% {
+        transform: translate(25%, -29%) rotate(0deg);
+      }
+    }
   }
 }

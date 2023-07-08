@@ -38,6 +38,11 @@ li.achievements-item {
   height: 144px;
   border: 4px solid #ffffff;
   text-transform: uppercase;
+  transition: transform 300ms ease;
+  transform: scale(1);
+  &:is(:hover, :focus) {
+    transform: scale(1.05);
+  }
   @include adaptive(desktop) {
     width: 282px;
     height: 282px;
@@ -77,10 +82,29 @@ li.achievements-item {
   position: absolute;
   z-index: 2;
   left: 50%;
-  transform: translate(-50%, 8%);
   width: 145px;
+
+  animation: rotate-1 3000ms linear infinite;
+
+  @keyframes rotate-1 {
+    0% {
+      transform: translate(-50%, 8%) rotate(0deg);
+    }
+    25% {
+      transform: translate(-50%, 8%) rotate(2deg);
+    }
+    50% {
+      transform: translate(-50%, 8%) rotate(0deg);
+    }
+    75% {
+      transform: translate(-50%, 8%) rotate(-2deg);
+    }
+    100% {
+      transform: translate(-50%, 8%) rotate(0deg);
+    }
+  }
+
   @include adaptive(desktop) {
     width: 414px;
-    transform: translate(-50%);
   }
 }
