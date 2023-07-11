@@ -112,7 +112,7 @@
   left: 50%;
   width: 138px;
   height: 138px;
-  transform: translate(-30%, 50%) rotate(-10deg);
+  transform: translate(-30%, 50%) rotate(30deg);
   pointer-events: none;
 
   @include adaptive(desktop) {
